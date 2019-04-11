@@ -58,7 +58,7 @@ name = 'Boku';
 
 
 //starting sprite
-sprite_index = sprite_idle;
+image_index = 0;
 
 
 
@@ -109,7 +109,7 @@ image_xscale = -1;
 hp = max_hp;
 
 with(obj_hero){
-sprite_index = sprite_idle;
+image_index = 0;
 action = 'Idle'
 hp = max_hp;
 }
@@ -144,8 +144,19 @@ hp = max_hp;
             <kind>1</kind>
             <string>//idle 
 if action = 'Idle'{
-sprite_index = sprite_idle;
+image_index = 0;
 }
+
+
+// sprites order
+// 0 - Idle
+// 1 - Fight pose
+// 2 - Defend
+// 3 - Hurt
+// 4 - ATK 1
+// 5 - ATK 2
+// 6 - ATK 3
+// 7 - DEAD
 
 //defeated
 if hp &lt;= 0{
@@ -153,7 +164,7 @@ action = 'Defeated';
 }
 
 if action = 'Defeated'{
-sprite_index = sprite_defeated;
+image_index = 7;
 
 if alarm[0] = -1{
 alarm[0] = 30*5;}

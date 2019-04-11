@@ -74,9 +74,19 @@ alarm[2] = 9000;
           <argument>
             <kind>1</kind>
             <string>//combat
+// sprites order
+// 0 - Idle
+// 1 - Fight pose
+// 2 - Defend
+// 3 - Hurt
+// 4 - ATK 1
+// 5 - ATK 2
+// 6 - ATK 3
+// 7 - DEAD
+
 if instance_exists(target){
-obj_hero.sprite_index = sprite_fight;
-target.sprite_index = target.sprite_fight;
+obj_hero.image_index = 1;
+target.image_index = 1;
 }
 
 alarm[1] = -1;
@@ -134,7 +144,18 @@ alarm[0] = -1;
           <argument>
             <kind>1</kind>
             <string>if action = 'Idle'{
-sprite_index = sprite_idle;
+image_index  = 0;
+
+// sprites order
+// 0 - Idle
+// 1 - Fight pose
+// 2 - Defend
+// 3 - Hurt
+// 4 - ATK 1
+// 5 - ATK 2
+// 6 - ATK 3
+// 7 - DEAD
+
 
 //if room = rm_bayajin_planet{
 //if !instance_exists(obj_train_button){
@@ -169,7 +190,7 @@ scr_damage();} else {alarm[1] = 1;};
 
 //defeated in fight
 if action = 'Defeated'{
-sprite_index = sprite_defeated;
+image_index = 7;
 
 with(obj_damage) {instance_destroy()};
 

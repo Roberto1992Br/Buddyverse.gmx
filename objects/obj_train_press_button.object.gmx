@@ -54,33 +54,32 @@ image_speed = 0;
 //wrong press
 if keyboard_check_pressed(ord('Q')) &amp;&amp; image_index != 0 {
 image_index = choose(1,2);
-obj_hero.sprite_index = obj_hero.sprite_idle;
+obj_hero.image_index = 0;
 obj_hero.xp -= 1;
 }
 
 if keyboard_check_pressed(ord('E')) &amp;&amp; image_index != 1 {
 image_index = choose(0,2);
-obj_hero.sprite_index = obj_hero.sprite_idle;
+obj_hero.image_index = 0;
 obj_hero.xp -= 1;
 }
 
 if keyboard_check_pressed(ord('W')) &amp;&amp; image_index != 2 {
 image_index = choose(0,1);
-obj_hero.sprite_index = obj_hero.sprite_idle;
+obj_hero.image_index = 0;
 obj_hero.xp -= 1;
 }
 
 //right press
 if keyboard_check_pressed(ord('Q')) &amp;&amp; image_index = 0 {
-obj_hero.sprite_index = obj_hero.sprite_training;
-obj_hero.image_index = 0;
+obj_hero.image_index = irandom_range(4,6);
 image_index = choose(1,2);
 
 obj_hero.xp += 1;
 }
 
 if keyboard_check_pressed(ord('E')) &amp;&amp; image_index = 1 {
-obj_hero.sprite_index = obj_hero.sprite_training;
+obj_hero.image_index = irandom_range(4,6);
 obj_hero.image_index = 1;
 image_index = choose(0,2);
 
@@ -88,7 +87,7 @@ obj_hero.xp += 1;
 }
 
 if keyboard_check_pressed(ord('W')) &amp;&amp; image_index = 2 {
-obj_hero.sprite_index = obj_hero.sprite_training;
+obj_hero.image_index = irandom_range(4,6);
 obj_hero.image_index = 2;
 image_index = choose(0,1);
 

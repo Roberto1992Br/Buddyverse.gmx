@@ -38,9 +38,11 @@
       <sprite>sprites\spr_bayajin_fight</sprite>
       <sprite>sprites\spr_bayajin_hurt</sprite>
       <sprite>sprites\spr_bayajin_defend</sprite>
+      <sprite>sprites\spr_Mayajin</sprite>
     </sprites>
-    <sprites name="Buttons and Menus">
+    <sprites name="Buttons Menus ETC">
       <sprite>sprites\spr_train</sprite>
+      <sprite>sprites\spr_clouds</sprite>
       <sprite>sprites\spr_train_press_button</sprite>
       <sprite>sprites\spr_button</sprite>
       <sprite>sprites\spr_scouter_target</sprite>
@@ -54,7 +56,6 @@
       <sprite>sprites\spr_roman_icon</sprite>
       <sprite>sprites\spr_cloak_icon</sprite>
     </sprites>
-    <sprite>sprites\spr_clouds</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bck_dirt</background>
@@ -78,36 +79,41 @@
     <font>fonts\fnt_very_big</font>
   </fonts>
   <objects name="objects">
-    <object>objects\obj_hero</object>
-    <object>objects\obj_enemy</object>
-    <object>objects\obj_other_player_enemy</object>
-    <object>objects\obj_damage</object>
-    <object>objects\obj_controler</object>
-    <object>objects\obj_button</object>
-    <object>objects\obj_train_button</object>
-    <object>objects\obj_enemy_butoon</object>
-    <object>objects\obj_enemy_button_mp</object>
-    <object>objects\obj_train_press_button</object>
-    <object>objects\obj_level_up_hp</object>
-    <object>objects\obj_level_up_attack</object>
-    <object>objects\obj_level_up_defense</object>
-    <object>objects\obj_level_up_parent</object>
-    <object>objects\obj_fight_button</object>
-    <object>objects\obj_back_button</object>
-    <object>objects\obj_bronze_highscore</object>
-    <object>objects\obj_silver_highscore</object>
-    <object>objects\obj_gold_highscore</object>
-    <object>objects\obj_challenge_button</object>
-    <object>objects\obj_hp_button</object>
-    <object>objects\obj_attack_button</object>
-    <object>objects\obj_defense_button</object>
-    <object>objects\obj_menu_info</object>
-    <object>objects\obj_clouds</object>
-    <object>objects\GMS</object>
-    <object>objects\obj_start</object>
-    <object>objects\obj_other_player</object>
-    <object>objects\obj_autosave</object>
-    <object>objects\obj_save_button</object>
+    <objects name="ETC">
+      <object>objects\obj_clouds</object>
+      <object>objects\obj_login</object>
+      <object>objects\GMS</object>
+      <object>objects\obj_damage</object>
+      <object>objects\obj_autosave</object>
+      <object>objects\obj_controler</object>
+    </objects>
+    <objects name="Characters">
+      <object>objects\obj_hero</object>
+      <object>objects\obj_enemy</object>
+      <object>objects\obj_other_player_enemy</object>
+    </objects>
+    <objects name="Buttons">
+      <object>objects\obj_save_button</object>
+      <object>objects\obj_menu_info</object>
+      <object>objects\obj_defense_button</object>
+      <object>objects\obj_attack_button</object>
+      <object>objects\obj_hp_button</object>
+      <object>objects\obj_challenge_button</object>
+      <object>objects\obj_gold_highscore</object>
+      <object>objects\obj_silver_highscore</object>
+      <object>objects\obj_bronze_highscore</object>
+      <object>objects\obj_back_button</object>
+      <object>objects\obj_fight_button</object>
+      <object>objects\obj_level_up_parent</object>
+      <object>objects\obj_level_up_defense</object>
+      <object>objects\obj_level_up_attack</object>
+      <object>objects\obj_level_up_hp</object>
+      <object>objects\obj_train_press_button</object>
+      <object>objects\obj_enemy_button_mp</object>
+      <object>objects\obj_enemy_butoon</object>
+      <object>objects\obj_train_button</object>
+      <object>objects\obj_button</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>

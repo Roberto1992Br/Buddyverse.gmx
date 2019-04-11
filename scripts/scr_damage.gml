@@ -1,14 +1,25 @@
+// sprites order
+// 0 - Idle
+// 1 - Fight pose
+// 2 - Defend
+// 3 - Hurt
+// 4 - ATK 1
+// 5 - ATK 2
+// 6 - ATK 3
+// 7 - DEAD
+
 if obj_hero.alarm[1] = -1{
 if instance_exists(target){
 
 
 var sorteio = choose('Ataca','Defende','Toma Dano','Inimigo Defende');
 
-if sorteio = 'Ataca'{
-obj_hero.sprite_index = obj_hero.sprite_attack;
-obj_hero.image_index = irandom(2);
 
-target.sprite_index = target.sprite_hurt;
+//causa dano
+if sorteio = 'Ataca'{
+obj_hero.image_index = irandom_range(4,6);
+
+target.image_index = 3;
 
 if obj_hero.image_index = 0{
 target.hp -= obj_hero.attack;
@@ -32,12 +43,13 @@ temp.damage = obj_hero.attack*1.5;
 
 }
 
+
+//toma dano
 if sorteio = 'Toma Dano'{
 
-target.sprite_index = target.sprite_attack;
-target.image_index = irandom(2);
+target.image_index = irandom_range(4,6);
 
-obj_hero.sprite_index = sprite_hurt;
+obj_hero.image_index = 3;
 
 if target.image_index = 0{
 obj_hero.hp -= target.attack;
@@ -59,11 +71,12 @@ temp.damage = target.attack*1.5;
 
 }
 
+//Defende
 if sorteio = 'Defende'{
-target.sprite_index = target.sprite_attack;
-target.image_index = irandom(2);
+target.image_index = irandom_range(4,6);
 
-obj_hero.sprite_index = sprite_defend;
+
+obj_hero.image_index = 2;
 
 
 if (target.attack - obj_hero.defense) > 0{
@@ -77,11 +90,11 @@ temp.damage = 'BLOCK';
 
 }
 
+//inimigo defende
 if sorteio = 'Inimigo Defende'{
-obj_hero.sprite_index = obj_hero.sprite_attack;
-obj_hero.image_index = irandom(2);
+obj_hero.image_index = irandom_range(4,6);
 
-target.sprite_index = target.sprite_defend;
+target.image_index = 2;
 
 
 if (obj_hero.attack - target.defense) > 0{

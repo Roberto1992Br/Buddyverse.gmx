@@ -61,7 +61,7 @@ power_level = 100;
 
 
 //starting sprite
-sprite_index = sprite_idle;
+image_index = 0;
 
 
 
@@ -126,7 +126,7 @@ alarm[1] = 2;
             <string>
 
 with(obj_hero){
-sprite_index = sprite_idle;
+image_index = 0;
 action = 'Idle';
 hp = max_hp;
 }
@@ -174,7 +174,7 @@ instance_destroy();
             <kind>1</kind>
             <string>//idle 
 if action = 'Idle'{
-sprite_index = sprite_idle;
+image_index = 0;
 }
 
 //defeated
@@ -183,7 +183,7 @@ action = 'Defeated';
 }
 
 if action = 'Defeated'{
-sprite_index = sprite_defeated;
+image_index = 7;
 
 if alarm[0] = -1{
 alarm[0] = 30*5;}

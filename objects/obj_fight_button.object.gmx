@@ -50,17 +50,25 @@ instance_destroy();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>// sprites order
+// 0 - Idle
+// 1 - Fight pose
+// 2 - Defend
+// 3 - Hurt
+// 4 - ATK 1
+// 5 - ATK 2
+// 6 - ATK 3
+// 7 - DEAD
 
 with(obj_hero.target){
 image_xscale = -1;
 action = 'Fighting';
-sprite_index = sprite_fight;
+image_index = 1;
 }
 
 with (obj_hero){
 action = 'Fighting';
-sprite_index = sprite_fight;
+image_index = 1;
 }
 
 with(obj_menu_info){
