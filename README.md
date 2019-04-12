@@ -1,0 +1,1 @@
+This is a project by KardelTheDwarf, aka Beto, to create a multiplayer Dragon Ball experience. It will have many beloved characters ready for you to play as, and will be made in Gamemaker. Stay tuned for updates!
