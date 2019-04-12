@@ -21,19 +21,19 @@ obj_hero.image_index = irandom_range(4,6);
 
 target.image_index = 3;
 
-if obj_hero.image_index = 0{
+if obj_hero.image_index = 4{
 target.hp -= obj_hero.attack;
 var temp = instance_create(target.x,target.y,obj_damage);
 temp.damage = obj_hero.attack;
 }
 
-if obj_hero.image_index = 1{
+if obj_hero.image_index = 5{
 target.hp -= (obj_hero.attack)*1.2;;
 var temp = instance_create(target.x,target.y,obj_damage);
 temp.damage = obj_hero.attack*1.2;
 }
 
-if obj_hero.image_index = 2{
+if obj_hero.image_index = 6{
 target.hp -= (obj_hero.attack)*1.5;
 var temp = instance_create(target.x,target.y,obj_damage);
 temp.damage = obj_hero.attack*1.5;
@@ -51,19 +51,19 @@ target.image_index = irandom_range(4,6);
 
 obj_hero.image_index = 3;
 
-if target.image_index = 0{
+if target.image_index = 4{
 obj_hero.hp -= target.attack;
 var temp = instance_create(obj_hero.x,obj_hero.y,obj_damage);
 temp.damage = target.attack;
 }
 
-if target.image_index = 1{
+if target.image_index = 5{
 obj_hero.hp -= (target.attack)*1.2;
 var temp = instance_create(obj_hero.x,obj_hero.y,obj_damage);
 temp.damage = target.attack*1.2;
 }
 
-if target.image_index = 2{
+if target.image_index = 6{
 obj_hero.hp -= (target.attack)*1.5;
 var temp = instance_create(obj_hero.x,obj_hero.y,obj_damage);
 temp.damage = target.attack*1.5;

@@ -13,31 +13,12 @@
     <sound>sound\snd_music_training_2</sound>
     <sound>sound\snd_music_training_3</sound>
     <sound>sound\snd_effect_click</sound>
+    <sound>sound\snd_music_login</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="Namekian">
-      <sprite>sprites\spr_namekian</sprite>
-      <sprite>sprites\spr_namekian_train</sprite>
-      <sprite>sprites\spr_namekian_defeated</sprite>
-      <sprite>sprites\spr_namekian_fight</sprite>
-      <sprite>sprites\spr_namekian_hurt</sprite>
-      <sprite>sprites\spr_namekian_defend</sprite>
-    </sprites>
-    <sprites name="Boku">
-      <sprite>sprites\spr_boku_train</sprite>
-      <sprite>sprites\spr_boku</sprite>
-      <sprite>sprites\spr_boku_defeated</sprite>
-      <sprite>sprites\spr_boku_fight</sprite>
-      <sprite>sprites\spr_boku_hurt</sprite>
-      <sprite>sprites\spr_boku_defend</sprite>
-    </sprites>
-    <sprites name="Megeta">
-      <sprite>sprites\spr_bayajin</sprite>
-      <sprite>sprites\spr_bayajin_train</sprite>
-      <sprite>sprites\spr_bayajin_defeated</sprite>
-      <sprite>sprites\spr_bayajin_fight</sprite>
-      <sprite>sprites\spr_bayajin_hurt</sprite>
-      <sprite>sprites\spr_bayajin_defend</sprite>
+    <sprites name="Characters">
+      <sprite>sprites\spr_Moku</sprite>
+      <sprite>sprites\spr_Namekian</sprite>
       <sprite>sprites\spr_Mayajin</sprite>
     </sprites>
     <sprites name="Buttons Menus ETC">
@@ -63,6 +44,8 @@
     <background>background\bck_sky2</background>
     <background>background\bck_grass</background>
     <background>background\bck_mountains</background>
+    <background>background\bck_box</background>
+    <background>background\bck_logo</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -86,6 +69,7 @@
       <object>objects\obj_damage</object>
       <object>objects\obj_autosave</object>
       <object>objects\obj_controler</object>
+      <object>objects\obj_char_creation</object>
     </objects>
     <objects name="Characters">
       <object>objects\obj_hero</object>
@@ -112,12 +96,16 @@
       <object>objects\obj_enemy_button_mp</object>
       <object>objects\obj_enemy_butoon</object>
       <object>objects\obj_train_button</object>
+      <object>objects\spr_char_back_button_back</object>
+      <object>objects\spr_char_button_forward</object>
+      <object>objects\spr_start_game_char_creation</object>
       <object>objects\obj_button</object>
     </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_init</room>
     <room>rooms\rm_main_menu</room>
+    <room>rooms\rm_character_creation</room>
     <room>rooms\rm_bayajin_planet</room>
     <room>rooms\rm_sp_enemy_selection</room>
     <room>rooms\rm_mp_enemy_selection</room>

@@ -76,7 +76,9 @@ randomize();
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if room = rm_bayajin_planet &amp;&amp; obj_hero.action != 'Fighting'{
+            <string>if instance_exists(obj_hero){
+//training room music
+if room = rm_bayajin_planet &amp;&amp; obj_hero.action != 'Fighting'{
 if (!audio_is_playing(playlist[pos])) {
 audio_stop_all();
    audio_play_sound(playlist[pos], 10, false);
@@ -84,6 +86,7 @@ audio_stop_all();
 }
 }
 
+//nemesis room music
 if room = rm_sp_enemy_selection &amp;&amp; obj_hero.action != 'Fighting'{
 if !audio_is_playing(snd_music_enemy_selection){
 audio_stop_all();
@@ -91,6 +94,7 @@ audio_play_sound(snd_music_enemy_selection,10,1);
 }
 }
 
+//pvp room music
 if room = rm_mp_enemy_selection &amp;&amp; obj_hero.action != 'Fighting'{
 if !audio_is_playing(snd_music_enemy_selection){
 audio_stop_all();
@@ -98,12 +102,33 @@ audio_play_sound(snd_music_enemy_selection,10,1);
 }
 }
 
+
+
+//fighting music
 if obj_hero.action = 'Fighting'{
 if !audio_is_playing(snd_music_battle){
 audio_stop_all();
 audio_play_sound(snd_music_battle,10,1);
 }
 }
+
+}
+//login music
+if room = rm_main_menu{
+if !audio_is_playing(snd_music_login){
+audio_stop_all();
+audio_play_sound(snd_music_login,10,1);
+}
+}
+
+//char creation music
+if room = rm_character_creation{
+if !audio_is_playing(snd_music_login){
+audio_stop_all();
+audio_play_sound(snd_music_login,10,1);
+}
+}
+
 </string>
           </argument>
         </arguments>
